@@ -23,7 +23,7 @@ def snippet_list(request, format=None):
 @api_view(['GET', 'PUT', 'DELETE'])
 def snippet_detail(request, pk, format=None):
     try:
-        snippet = Snippet.object.get(pk=pk)
+        snippet = Snippet.objects.get(pk=pk)
     except Snippet.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
 
