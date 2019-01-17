@@ -9,6 +9,6 @@ router.register('groups', views.GroupViewSet)
 
 urlpatterns = [
     url('', include(router.urls)),
-    url('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # url('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('', include('snippets.urls')),
 ]
